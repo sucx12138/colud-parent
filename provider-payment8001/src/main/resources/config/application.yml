@@ -1,0 +1,16 @@
+server:
+  port: 8001
+  servlet:
+    context-path: /provider
+spring:
+    profiles:
+      active: dev
+
+#整合Mybatis
+mybatis:
+  #  扫描数据持久对应的实体类 路径 Package级别
+  #    type-aliases-package:
+  #  mybatis 对应的 .xml文件路径
+  #   mappers-locations: classpath*:com/urthink/upfs/**/*Mapper.xml
+  config-location: classpath:config/mybatis-config.xml
+  mapper-locations: classpath:mappers/**.xml,classpath:mappers/**/**.xml
